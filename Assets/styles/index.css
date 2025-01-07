@@ -1,20 +1,27 @@
 
 body {
     margin: 0;
-    font-family: Helvetica;
+    font-family: "Cantata One", serif;
     font-size: 18px;
     color: #fff;
 }
 
+body p {
+    margin: 0;
+    font-family: "Arial";
+}
+
 header {
-    background-color: #111;
+    background-color: #f7f7f7;
     padding: 20px;
     text-align: center;
     border-bottom: 2px solid #d4af37;
 }
-
+header .logo{
+    max-width: 200px;
+}
 header h1 {
-    margin: 0;
+    margin-bottom: 10;
     color: #d4af37;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -24,10 +31,10 @@ nav {
 }
 
 nav a {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     margin: 0 15px;
-    font-weight: bold;
+    font-weight: 200;
     transition: color 0.3s;
 }
 
@@ -41,7 +48,7 @@ nav a:hover {
     background-size: cover;
     background-position: center;
     text-align: center;
-    padding: 100px 20px;
+    padding: 200px 20px;
     color: #fff;
     height: max-content;
 }
@@ -71,7 +78,7 @@ nav a:hover {
     font-size: 1.5rem;
     margin: 20px 0;
     color: #d4af37;
-    font-weight: bold;
+    font-weight: 200;
 }
 
 .services {
@@ -85,6 +92,8 @@ nav a:hover {
     text-align: center;
     margin-bottom: 40px;
     font-size: 200%;
+    font-weight: 200;
+    margin-top: 0;
 }
 
 .service {
@@ -92,9 +101,8 @@ nav a:hover {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    margin: 20px auto;
+    margin: auto auto;
     max-width: 1200px;
-    padding: 20px;
 }
 
 .service:nth-child(even) {
@@ -109,9 +117,13 @@ nav a:hover {
 .service-text h4 {
     color: #d4af37;
     margin-bottom: 10px;
+    font-size: 150%;
+    font-weight: 200;
 }
 
 .service-text p {
+    font-family: 'inter' sans-serif;
+    font-weight: 200;
     margin: 0;
 }
 
@@ -119,7 +131,7 @@ nav a:hover {
     flex: 1;
     max-width: 50%;
     overflow: hidden;
-    max-height: 30cap;
+    max-height: 35cap;
 }
 
 .service-image img {
