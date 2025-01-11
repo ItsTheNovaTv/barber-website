@@ -12,47 +12,78 @@ body p {
 }
 
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #f7f7f7;
-    padding: 20px;
-    text-align: center;
-    border-bottom: 2px solid #d4af37;
+    padding: 10px;
+    border-bottom: 5px solid #d4af37;
+    gap: 15%;
+    position: sticky;
+    top: 0ch;
+    z-index: 10;
 }
 header .logo{
-    max-width: 200px;
+    max-height: 130px;
 }
 header h1 {
-    margin-bottom: 10;
     color: #d4af37;
     font-family: 'Times New Roman', Times, serif;
 }
 
 nav {
-    margin-top: 30px;
-}
 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    
+
+}
 nav a {
     color: #000000;
     text-decoration: none;
-    margin: 0 15px;
     font-weight: 200;
-    transition: color 0.3s;
+    transition: color 0.3s;   
+
 }
+
+
+
 
 nav a:hover {
     color: #d4af37;
 }
-
 .hero {
+    object-fit: cover;
     position: relative;
-    background-image: url('../Images/exterior2.jpg');
-    background-size: cover;
-    background-position: center;
     text-align: center;
-    padding: 200px 20px;
-    color: #fff;
-    height: max-content;
+    height: auto; /* Se ajusta según el contenido */
+    overflow: hidden;
+    max-height: 700px;
+    
 }
 
+.hero-image {
+    width: 100%;
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover;
+    object-position: center;
+    margin-top: -40%; /* Ajusta la imagen para que se vea mejor */
+}
+.hero-text{
+    display: block;
+    height: max-content;
+    object-position: bottom;
+}
+.herotext-container {
+    position: absolute; /* Coloca el texto sobre la imagen */
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta el texto al centro exacto */
+    color: var(--gold-color);
+    z-index: 2; /* Asegura que el texto esté encima de la imagen */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Mejora la legibilidad del texto */
+}
 .hero::before {
     content: "";
     position: absolute;
@@ -67,6 +98,7 @@ nav a:hover {
 .hero h2, .hero p {
     position: relative;
     z-index: 2;
+    color: #d4af37;
 }
 
 .hero h2 {
@@ -88,11 +120,11 @@ nav a:hover {
 }
 
 .services h3 {
-    color: #d4af37;
+    color: #000000;
     text-align: center;
     margin-bottom: 40px;
     font-size: 200%;
-    font-weight: 200;
+    font-weight: 600;
     margin-top: 0;
 }
 
@@ -103,6 +135,7 @@ nav a:hover {
     justify-content: space-between;
     margin: auto auto;
     max-width: 1200px;
+    overflow: hidden;
 }
 
 .service:nth-child(even) {
@@ -129,97 +162,21 @@ nav a:hover {
 
 .service-image {
     flex: 1;
+    min-width: 50%;
     max-width: 50%;
     overflow: hidden;
     max-height: 35cap;
+    margin-top: ;
+
 }
 
 .service-image img {
     width: 100%;
     height: auto;
     display: block;
+    margin-top: -20%;
 }
 
-.testimonials {
-    background-color: #111;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.testimonials h3 {
-    color: #d4af37;
-    margin-bottom: 20px;
-}
-
-.testimonial {
-    max-width: 600px;
-    margin: 20px auto;
-    background-color: #000;
-    border: 2px solid #d4af37;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.testimonial p {
-    font-style: italic;
-    color: #d4af37;
-}
-
-.testimonial h4 {
-    margin-top: 10px;
-    color: #fff;
-}
-
-.contact {
-    padding: 50px 20px;
-    background-color: #000;
-    color: #fff;
-}
-
-.contact h3 {
-    color: #d4af37;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.contact form {
-    max-width: auto;
-    margin: 0 auto;
-}
-
-.contact form input, .contact form textarea {
-    min-width: 95%;
-    width: auto;
-    padding: 10px;
-    margin: 10px 0;
-    border: 2px solid #d4af37;
-    border-radius: 5px;
-    background-color: #111;
-    color: #fff;
-    transition: background-color 0.3s;
-}
-
-.contact form input:focus, .contact form textarea:focus {
-    background-color: #222;
-    outline: none;
-}
-
-.contact form button {
-    background-color: #d4af37;
-    color: #000;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.contact form button:hover {
-    background-color: #fff;
-    color: #000;
-    transform: scale(1.1);
-}
 
 footer {
     background-color: #111;
