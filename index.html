@@ -4,12 +4,14 @@
     <title>TRUE FADES VIP BARBER</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cantata+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">    
     <link rel="stylesheet" href="./Assets/styles/index.css">
+    <script src="Assets/Scripts/script.js" defer></script>
+</head>
+<body>
+
     <div class="hero">
         <img src="Assets/Images/exterior2.jpg" class="hero-image">
         <div class="hero-text">
@@ -20,12 +22,19 @@
             
         </div>
     </div>
-    <header>
+        <img id="open-sidebar-button" onclick="openSidebar()" src="Assets/Icons/barras-horizontales.png" alt="Side Menu">    
+    </div>
+
+    <header id="navbar">
+        <div class="close-button-area"> 
+            <img id="close-sidebar-button" onclick="closeSidebar()" src="Assets/Icons/x.png" alt="">
+        </div>
+        <img  class='logo' src="/Assets/Images/logo.jpg" alt="Logos">
         
-        <img class='logo' src="/Assets/Images/logo.jpg" alt="Logos">
         <nav>
+            
             <a href="#Agenda">Agenda</a> 
-            <a class href="#servicios">Servicios</a>
+            <a href="#servicios">Servicios</a>
             <a href="#contacto">Contacto</a>
             <a href="#ubicacion">Ubicación</a>
 
