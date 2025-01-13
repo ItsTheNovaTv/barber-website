@@ -23,6 +23,39 @@ header {
     top: 0ch;
     z-index: 10;
 }
+
+@media screen and (max-width:700px){
+    header{
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: min(15em, 100%);
+        z-index: 12;
+        border-left: 1px solid #d4af37;
+        justify-content: start;
+        transition: right 300ms ease-out;
+    
+    }
+    header.show{
+        right: 0;
+    }
+    nav {
+        width: 100%;
+        flex-direction: column;
+
+    }
+    nav a{
+        align-items: center;
+        justify-content: center;
+        height: 2.8em;
+        width: 100%;
+
+    }
+    
+}
+
 header .logo{
     max-height: 130px;
 }
@@ -49,7 +82,6 @@ nav a {
 
 
 
-
 nav a:hover {
     color: #d4af37;
 }
@@ -68,7 +100,7 @@ nav a:hover {
     height: auto; /* Mantiene la proporción de la imagen */
     object-fit: cover;
     object-position: center;
-    margin-top: -40%; /* Ajusta la imagen para que se vea mejor */
+    margin-top: -50%; /* Ajusta la imagen para que se vea mejor */
 }
 .hero-text{
     display: block;
@@ -93,6 +125,11 @@ nav a:hover {
     height: 100%;
     background: rgba(0, 0, 0, 0.4);
     z-index: 1;
+}
+.hero h1{
+    font-weight: 300;
+    font-size: 2em;
+    font-family: "inter", sans-serif;
 }
 
 .hero h2, .hero p {
@@ -166,7 +203,7 @@ nav a:hover {
     max-width: 50%;
     overflow: hidden;
     max-height: 35cap;
-    margin-top: ;
+    margin-top: 0;
 
 }
 
